@@ -10,5 +10,5 @@ runs:
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
 
-    - run: tagging.sh
+    - run: ./tagging.sh
       shell: bash
