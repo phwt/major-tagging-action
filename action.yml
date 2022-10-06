@@ -1,10 +1,8 @@
 name: Major tagging
 description: Move a major tag to the latest tag
-
 branding:
   icon: "tag"
   color: "blue"
-
 runs:
   using: "composite"
   steps:
@@ -21,8 +19,8 @@ runs:
         MAJOR_TAG=$(awk -F'.' '{print $1}' <<<"$CURRENT_TAG")
 
         # Remove remote old major tag if exists
-        FIND_RESULT=$(git tag -l '$MAJOR_TAG')
-        if [[ $FIND_RESULT ]]; then
+        REMOTE_RESULT=$(git ls-remote --tags origin -l "$MAJOR_TAG")
+        if [[ $REMOTE_RESULT ]]; then
             echo "Moving major tag '$MAJOR_TAG' to the same commit as '$CURRENT_TAG' tag"
             git push --delete origin $MAJOR_TAG
         else
