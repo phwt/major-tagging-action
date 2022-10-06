@@ -17,6 +17,7 @@ runs:
       run: |
         CURRENT_TAG=$(git describe --tags)
         MAJOR_TAG=$(awk -F'.' '{print $1}' <<<"$CURRENT_TAG")
+        echo $(git tag)
         echo "$CURRENT_TAG"
         echo "$MAJOR_TAG"
 
