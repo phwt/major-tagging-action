@@ -22,6 +22,7 @@ runs:
 
         # Remove remote old major tag if exists
         FIND_RESULT=$(git tag -l '$MAJOR_TAG')
+        echo "$FIND_RESULT"
         if [[ $FIND_RESULT ]]; then
             echo "Moving major tag '$MAJOR_TAG' to the same commit as '$CURRENT_TAG' tag"
             git push --delete origin $MAJOR_TAG
