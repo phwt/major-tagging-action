@@ -1,0 +1,14 @@
+name: Major tagging
+description: Move a major tag to the latest tag
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Git
+      shell: bash
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+
+    - run: tagging.sh
+      shell: bash
