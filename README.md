@@ -1,6 +1,11 @@
 # Major Tagging Action
 
-Move a major tag to the latest tag
+Move a major tag (e.g. `v0`, `v1`, ...) to the latest tag
+
+**Example**:
+
+- When `v1.0.1` is created and pushed the `v1` tag will be moved to the same commit of latest pushed tag.
+- If doesn't exist, major tag will be created.
 
 ## Usage example
 
