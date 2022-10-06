@@ -40,6 +40,7 @@ Later, `v1.0.2` tag is created at the latest commit:
 
 ```bash
 > git commit -am 'feat: create `isEven` method'
+> git tag v1.0.2
 > git log --oneline
 bc5e6d3 (tag: v1.0.2) feat: create `isEven` method
 dd3168d (tag: v1.0.1, tag: v1) fix: add support for 2 digit number
