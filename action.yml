@@ -1,6 +1,10 @@
 name: Major tagging
 description: Move a major tag to the latest tag
 
+branding:
+  icon: "tag"
+  color: "blue"
+
 runs:
   using: "composite"
   steps:
