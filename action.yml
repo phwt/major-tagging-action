@@ -1,10 +1,8 @@
 name: Major tagging
 description: Move a major tag to the latest tag
-
 branding:
   icon: "tag"
   color: "blue"
-
 runs:
   using: "composite"
   steps:
@@ -19,6 +17,8 @@ runs:
       run: |
         CURRENT_TAG=$(git describe --tags)
         MAJOR_TAG=$(awk -F'.' '{print $1}' <<<"$CURRENT_TAG")
+        echo "$CURRENT_TAG"
+        echo "$MAJOR_TAG"
 
         # Remove remote old major tag if exists
         FIND_RESULT=$(git tag -l "$MAJOR_TAG")
