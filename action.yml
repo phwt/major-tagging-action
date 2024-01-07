@@ -29,4 +29,4 @@ runs:
 
         # Tag current commit with major tag
         git tag $MAJOR_TAG
-        git push --tags
+        git push origin $MAJOR_TAG
